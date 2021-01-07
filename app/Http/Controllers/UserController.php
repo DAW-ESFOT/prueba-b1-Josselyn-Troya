@@ -45,9 +45,9 @@ class UserController extends Controller
         return $user;
     }
 
-    public function showBonus(Genre $genre, User $user, Movie $movie)
-    {
-        $user = $movie->where($genre->get())->get();
-        return $user;
-    }
+    //public function showBonus(Genre $genre, User $user, Movie $movie)
+    //{
+    //    $user = $movie->where($genre->get())->get();
+    //    return $user;
+    //}
 }

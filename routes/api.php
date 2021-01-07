@@ -40,6 +40,8 @@ use Illuminate\Support\Facades\Route;
     Route::get('genres/{genre}/movies', 'App\Http\Controllers\GenreController@showGenre');
     Route::get('users/{user}/genres', 'App\Http\Controllers\UserController@showUser');
 
+    //Route::get('users/{user}/movies/genres', 'App\Http\Controllers\UserController@showUser');
+
 
 
 
