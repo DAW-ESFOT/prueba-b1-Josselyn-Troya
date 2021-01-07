@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Movie;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -36,5 +37,17 @@ class UserController extends Controller
         $user->delete();
 
         return response()->json(null, 204);
+    }
+
+    public function showGenre(Genre $genre, User $user)
+    {
+        $user = $user->$genre->get();
+        return $user;
+    }
+
+    public function showBonus(Genre $genre, User $user, Movie $movie)
+    {
+        $user = $movie->where($genre->get())->get();
+        return $user;
     }
 }

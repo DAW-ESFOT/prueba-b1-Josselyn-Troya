@@ -38,6 +38,7 @@ use Illuminate\Support\Facades\Route;
     Route::delete('users/{user}','App\Http\Controllers\UserController@delete');
 
     Route::get('genres/{genre}/movies', 'App\Http\Controllers\GenreController@showGenre');
+    Route::get('users/{user}/genres', 'App\Http\Controllers\UserController@showUser');
 
 
 
